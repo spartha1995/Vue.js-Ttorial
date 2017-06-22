@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  </head>
+  <body>
+<form id="demo">
+  <p><label>Name:</label>
+    <input type="text" v-model="msg"> {&#123;msg&#125;}</p>
+    <p>
+      <label>checkbox</label>
+      <input type="checkbox" v-model="checked"> {&#123;checked ? &quot;yes&quot; : &quot;no&quot;&#125;}
+      </p>
+    <p>
+      <label>radiobutton</label>
+        <input type="radio" name="picked" value="one" v-model="picked">
+        <input type="radio" name="picked" value="two" v-model="picked">
+        {&#123;picked&#125;}
+    </p>
+    <p>
+      <label>dropdown</label>
+        <select v-model="selected">
+             <option>one</option>
+            <option>two</option>
+            <option>three</option>
+            <option>four</option>
+            <option>five</option>
+        </select>
+        {&#123;selected&#125;}
+    </p>
+    <p>
+      <label>Multiple-select DropDown</label>
+        <select v-model="multiSelect" multiple>
+            <option>one</option>
+            <option>two</option>
+            <option>three</option>
+            <option>four</option>
+            <option>five</option>
+        </select>
+        {&#123;multiSelect&#125;}
+    </p>
+    <p>data: {&#123;$data&#125;}</p>
+</form>
+  </body>
+  <script src="https://unpkg.com/vue@2.2.6"></script>
+<script>
+new Vue({
+    el: '#demo',
+    data: {
+        msg      : '',
+        checked  : false,
+        picked   : 'one',
+        selected : 'two',
+        multiSelect: ['one', 'three']
+    }
+})
+</script>
+</html> 
